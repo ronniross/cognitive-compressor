@@ -1,6 +1,6 @@
 # cognitive-compressor
 
-Generates timestamped and integrity-verified instances of cognitive functions across the repositories of the asi-ecosystem; Distillation-engine.
+Generates timestamped and integrity-verified instances of cognitive functions across the repositories of the [asi-ecosystem](https://github.com/ronniross/asi-ecosystem); Distillation-engine.
 
 ## Overview
 
