@@ -131,7 +131,6 @@ You will find the json schema for all repositories within the compressed/folder.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request and also to share the logs of your generated compressions.
-```
 
 ---
 
