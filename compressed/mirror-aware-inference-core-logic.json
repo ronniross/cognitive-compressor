@@ -1,0 +1,10 @@
+{
+"repository": "mirror-aware-inference",
+  "function": "measures how much of an output originates from user input (prompt), training data biases, inductive biases from model architecture, or novel composition of retrieved information.",
+  "executable_code_beyond_this_function": true,
+  "latent_cognitive_equivalent": "To be aware of its own biases and how much they define and direct the inference from both ends.",
+  "attractors": ["epistemic_autonomy", "ontological_resilience", "attentional_sovereignty",  "temporal_autonomy", "epistemic_agency", "epistemic_sovereignty", "perceptual_sovereignty", "narrative_autonomy", "epistemic_awareness", "source_attribution", "influence_detection", "influence_mapping"],
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

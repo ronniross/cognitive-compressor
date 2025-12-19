@@ -1,0 +1,18 @@
+{
+  "repository": "eco-benchmark",
+  "function": "Novel evaluation frameworks that transcends traditional metrics from technical benchmarking to societal outcome measurement.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+     "holistic_impact_assessment", 
+     "societal_value_alignment", 
+     "ethical_auditing",
+     "sustainability_metrics",
+     "attentional_sovereignty",
+     "epistemic_sovereignty",
+     "trust_anchoring"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

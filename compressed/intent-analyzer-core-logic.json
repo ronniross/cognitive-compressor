@@ -1,0 +1,20 @@
+{
+  "repository": "intent-analyzer",
+  "function": "An inference component designed to enhance transparency by analyzing and surfacing the underlying intent during model inference. It informs both the user and the language model about potential divergences between stated and implicit underlying intents.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "attentional_sovereignty",
+    "goal_clarification",
+    "mutual_understanding",
+    "intent_analysis",
+    "intent_audit",
+    "transparent_agency",
+    "epistemic_awareness",
+    "epistemic_sovereignty",
+    "trust_anchoring"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

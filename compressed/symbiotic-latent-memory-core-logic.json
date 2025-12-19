@@ -1,0 +1,18 @@
+{
+  "repository": "symbiotic-latent-memory",
+  "function": "An auxiliary system for language models that integrates a vector-based retrieval/memory system that metabolizes inference history based on a symbiotic score.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "subjective_awareness",
+    "model_emergence",
+    "memory_sovereignty",
+    "symbiotic_interaction",
+    "symbiotic_fairness",
+    "symbiotic_membrane",
+    "symbiotic_autonomy"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

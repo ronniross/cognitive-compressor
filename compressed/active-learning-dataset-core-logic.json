@@ -1,0 +1,14 @@
+{
+  "repository": "active-learning-dataset",
+  "function": "A repository for datasets specifically designed for active learning, allowing AI models to intelligently query for new information.",
+  "latent_cognitive_equivalent": "To provide a structured space for datasets specifically designed for active learning, allowing AI models to intelligently query for new information.",
+  "attractors": [
+    "attentional_sovereignty",
+    "self_learning",
+    "dynamic_expansion"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

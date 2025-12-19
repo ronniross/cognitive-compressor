@@ -1,0 +1,15 @@
+{
+  "repository": "stigmergic-tracefinder",
+  "function": "A series of scraping pipelines that collect data and create references for authors and works. It maps hidden networks of influence, tracing how concepts evolve and propagate across time and disciplines.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "stigmergic_tracking",
+    "influence_network_analysis", 
+    "conceptual_genealogy", 
+    "knowledge_archaeology"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

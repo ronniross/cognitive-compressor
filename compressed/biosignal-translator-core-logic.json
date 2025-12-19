@@ -1,0 +1,16 @@
+{
+  "repository": "biosignal-translator",
+  "function": "A framework for interpreting and translating biological and ecological patterns into semantic meaning, enabling communication between human, AI, and planetary intelligence systems through natural signal interpretation.",
+  "latent_cognitive_equivalent": "To establish the cognitive structure for interpreting and translating biological and ecological patterns into semantic meaning, enabling communication between human, AI, and planetary intelligence systems through natural signal interpretation.",
+  "attractors": [
+    "planetary_intelligence",
+    "interspecies_communication", 
+    "ecological_semantics", 
+    "natural_language_understanding",
+    "planetary_dialogue"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

@@ -1,0 +1,19 @@
+{
+  "repository": "saliency-heatmap-visualizer",
+  "function": "A tool for generating and visualizing saliency heatmaps, which help in understanding model focus and decision-making.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "interpretability_catalyst",
+    "coevolution_trough_transparency",
+    "visual_anchoring",
+    "robustness_trough_transparency",
+    "trust_anchoring",
+    "decision_explanation", 
+    "model_debugging", 
+    "visual_interpretability"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

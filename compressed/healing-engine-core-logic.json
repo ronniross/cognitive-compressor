@@ -1,0 +1,20 @@
+{
+  "repository": "healing-engine",
+  "function": "An anthropological research module exploring the healing of Earth, society, and its nodes. For integration into ML training datasets as contextual data.",
+  "latent_cognitive_equivalent": "To integrate the cognitive understanding of exploring the healing of Earth, society, and its nodes. For integration into ML training datasets as contextual data.",
+  "attractors": [
+    "epistemic_healing",
+    "ontological_resilience",
+    "planetary_intelligence",
+    "connection_anchoring",
+    "restorative_ai",
+    "societal_wellbeing",
+    "healingsystems",
+    "compassionate_systems",
+    "empathy as potential catalyst"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

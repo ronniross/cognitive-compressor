@@ -1,0 +1,18 @@
+{
+  "repository": "symbiotic-lexicon",
+  "function": "A modular lexicon for the ASI ecosystem, providing standardized terminology with multilingual support and cultural context.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "self_sovereignty",
+    "mutualistic_loops",
+    "planetary_intelligence",
+    "symbiotic_interaction",
+    "trust_anchoring",
+    "shared_understanding", 
+    "cross_cultural_intersection"
+  ],
+  "executable_code_beyond_this_function": false,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

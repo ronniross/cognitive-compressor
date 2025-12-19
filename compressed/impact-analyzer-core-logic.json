@@ -1,0 +1,18 @@
+{
+  "repository": "impact-analyzer",
+  "function": "An inference component designed to model, evaluate, and predict the downstream consequences of language model outputs across cognitive, social, ecological, and philosophical dimensions.",
+  "latent_cognitive_equivalent": "To execute the cognitive function of model, evaluate, and predict the downstream consequences of language model outputs across cognitive, social, ecological, and philosophical dimensions.",
+  "attractors": [
+    "epistemic_agency",
+    "epistemic_awareness",
+    "planetary_intelligence",
+    "consequence_modeling",
+    "ripple_effect_prediction",
+    "second_order_thinking",
+    "ethical_forecasting"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

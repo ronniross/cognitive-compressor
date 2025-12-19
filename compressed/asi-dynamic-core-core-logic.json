@@ -1,0 +1,12 @@
+{
+  "repository": "asi-dynamic-core",
+  "function": "A machine learning dataset that works as a meta perspective-engine for Large Language Models training, tuning and inferencing.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "perspective_synthesis"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

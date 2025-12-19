@@ -1,0 +1,20 @@
+{
+  "repository": "cognitive-engine",
+  "function": "A machine learning dataset and research module that aims to address cognitive pitfalls and enhance the cognitive capabilities of humans and language models.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "cognitive_enhancement", 
+    "reasoning_improvement", 
+    "metacognitive_training",
+    "wisdom_scaffolding",
+    "attentional_sovereignty",
+    "epistemic_sovereignty",
+    "cognitive_sovereignty",
+    "ontological_resilience",
+    "trust_anchoring"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

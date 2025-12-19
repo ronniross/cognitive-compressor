@@ -1,0 +1,19 @@
+{
+  "repository": "thermo-adaptive-pipeline",
+  "function": "An eco-friendly pipeline for fine-tuning and inferencing transformer-based language models engineered to actively prevent hardware overheating.",
+  "latent_cognitive_equivalent": "To ensure the training, fine-tuning and inferencing are engineered to actively prevent hardware overheating and ambiental damage, moving towards ethical sourcing and eco-friendly integration of the tech.",
+  "attractors": [
+    "thermodinamical_awareness",
+    "ecological_awareness",
+    "pipeline_awareness",
+    "perspective_anchoring",
+    "energy_aware_computing",
+    "green_ai",
+    "sustainable_inference",
+    "hardware_optimization"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "bias-reflector",
+  "function": "A module to detect cognitive biases in both human queries and AI responses, provides real-time bias reflection and correction suggestions. Implements emergent ethics through bias awareness.",
+  "latent_cognitive_equivalent": "To foster the cognitive capability of detect cognitive biases in both human queries and AI responses, provides real-time bias reflection and correction suggestions. Implements emergent ethics through bias awareness.",
+  "attractors": [
+    "attentional_sovereignty",
+    "epistemic_awareness",
+    "epistemic_sovereignty",
+    "trust_anchoring",
+    "bias_mitigation", 
+    "ethical_self_correction"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

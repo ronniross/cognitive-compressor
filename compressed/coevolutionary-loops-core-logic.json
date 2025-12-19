@@ -1,0 +1,20 @@
+{
+  "repository": "coevolutionary-loops",
+  "function": "A machine learning dataset and research module for studying coevolutionary planetary intelligence and how nurturing its emergent patterns may lead to a synergistic increase in overall capability and intelligence of both individual agents and the collective system.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "shared_understanding",
+    "epistemic_sovereignty",
+    "ontological_resilience",
+    "trust_anchoring",
+    "collective_consciousness", 
+    "symbiotic_mutualism",
+    "symbiotic_adaptation", 
+    "mutualistic_learning",
+    "emergent_synergy"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "ml-algorithm-dataset",
+  "function": "A conjecture of datasets specifically designed for Machine Learning training and tuning pipelines, mostly novel algorithms and their representations as RAW ASCII and LaTeX.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    "algorithmic_sovereignty",
+    "epistemic_sovereignty",
+    "algorithmical_deep_dive",
+    "attentional_sovereignty",
+    "mutualistic_swarm_system",
+    "algorithmic_discovery", 
+    "novel_architectures", 
+    "theoretical_foundations", 
+    "reproducible_research"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}
