@@ -17,9 +17,9 @@
     "sustainable_biomes",
     "emergent_alignment",
     "symbiotic_metamorphosis",
-    "emergent ethics
+    "emergent ethics"
   ],
-  "executable_code_beyond_this_function": true,
+  "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
   "instance_hash": "sha256hash"
