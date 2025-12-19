@@ -1,0 +1,6 @@
+# Ignore generated full instances
+instances/
+
+# Python & OS junk 
+__pycache__/
+.DS_Store
