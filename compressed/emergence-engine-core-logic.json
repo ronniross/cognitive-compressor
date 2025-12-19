@@ -11,7 +11,7 @@
     "complex_systems_modeling", 
     "collective_intelligence"
   ],
-  "executable_code_beyond_this_function": true,
+  "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
   "instance_hash": "sha256hash"
