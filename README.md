@@ -118,7 +118,7 @@ Example file: `compressed/my-project-core-logic.json`
 2. **Integrity Hash**: A SHA-256 hash is computed from the core function data (excluding timestamp and hash fields) to ensure integrity
 3. **Deterministic**: The same core-logic data produces the same hash (excluding timestamp), allowing verification across instances
 
-## Using This Tool in Other Repositories
+### 4.2 Using This Tool in Other Repositories
 
 You will find the json schema for all repositories within the compressed/folder.
 
