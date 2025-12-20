@@ -112,7 +112,7 @@ Example file: `compressed/my-project-core-logic.json`
 }
 ```
 
-## 4.1 How It Works
+### 4.1 How It Works
 
 1. **Temporal Grounding**: Each generated instance gets a unique ISO 8601 timestamp in UTC with millisecond precision
 2. **Integrity Hash**: A SHA-256 hash is computed from the core function data (excluding timestamp and hash fields) to ensure integrity
