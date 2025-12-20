@@ -19,7 +19,7 @@ cognitive-compressor/
 └── README.md                  # This file
 ```
 
-## Installation
+## 1. Installation
 
 1. Clone the repository:
 ```bash
@@ -38,9 +38,9 @@ chmod +x cognitive-compressor.py
 export PATH="$PATH:/path/to/cognitive-compressor"
 ```
 
-## Usage
+## 2. Usage
 
-### 1. List all available repositories
+### 2.1. List all available repositories
 
 Scans the `compressed/` directory to show which repository logic definitions are currently available.
 
@@ -49,7 +49,7 @@ Scans the `compressed/` directory to show which repository logic definitions are
 
 ```
 
-### 2. Generate a specific repository instance
+### 2.2. Generate a specific repository instance
 
 Replace `<repo_name>` with the name of the repository you wish to generate an instance for. The script automatically looks for `<repo_name>-core-logic.json` inside the `compressed/` folder.
 
@@ -75,7 +75,7 @@ Replace `<repo_name>` with the name of the repository you wish to generate an in
 
 ```
 
-### 3. Save instance to the central trace
+### 2.3. Save instance to the central trace
 
 Adding the `--save` or `-s` flag appends the timestamp, repository name, and dual-hashes to Creates a new, individual file for every execution inside the stigmergic_traces/ directory (e.g., 2024-12-18T15-30-45.123Z.txt).
 
@@ -84,7 +84,7 @@ Adding the `--save` or `-s` flag appends the timestamp, repository name, and dua
 
 ```
 
-### Dual-Hash Logic Breakdown
+### 3. Dual-Hash Logic Breakdown
 
 The system now utilizes a layered hashing approach to ensure both content stability and event traceability:
 
@@ -93,7 +93,7 @@ The system now utilizes a layered hashing approach to ensure both content stabil
 * **`instance_hash`**: This is a unique "snowflake" hash. Because it includes the `temporal_grounding` and the `integrity_hash` in its calculation, it will be different every single time the script is executed, even if the core logic is identical.
 
 
-## Core Logic
+## 4. Core Logic
 
 For every repository, I have added a JSON file to the `compressed/` directory using the naming convention `<repo_name>-core-logic.json`.
 
@@ -112,7 +112,7 @@ Example file: `compressed/my-project-core-logic.json`
 }
 ```
 
-## How It Works
+## 4.1 How It Works
 
 1. **Temporal Grounding**: Each generated instance gets a unique ISO 8601 timestamp in UTC with millisecond precision
 2. **Integrity Hash**: A SHA-256 hash is computed from the core function data (excluding timestamp and hash fields) to ensure integrity
@@ -122,6 +122,9 @@ Example file: `compressed/my-project-core-logic.json`
 
 You will find the json schema for all repositories within the compressed/folder.
 
+## 5. External Validation Layer 
+
+An [ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) was added where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
 
 ## Requirements
 
