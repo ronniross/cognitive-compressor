@@ -84,7 +84,7 @@ Adding the `--save` or `-s` flag appends the timestamp, repository name, and dua
 
 ```
 
-### 3. Dual-Hash Logic Breakdown
+## 3. Dual-Hash Logic Breakdown
 
 The system now utilizes a layered hashing approach to ensure both content stability and event traceability:
 
