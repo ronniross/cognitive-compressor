@@ -5,9 +5,9 @@ Generates timestamped and integrity-verified instances of cognitive functions ac
 ## Overview
 
 This tool reads cognitive function definitions from the `compressed/` directory and generates instances with:
-* [cite_start]**Temporal grounding**: ISO 8601 timestamp in UTC marking when the instance was created.
-* [cite_start]**Integrity hash**: SHA-256 hash ensuring data integrity and provenance.
-* [cite_start]**Instance hash**: A unique "snowflake" hash for every execution.
+* **Temporal grounding**: ISO 8601 timestamp in UTC marking when the instance was created.
+* **Integrity hash**: SHA-256 hash ensuring data integrity and provenance.
+* **Instance hash**: A unique "snowflake" hash for every execution.
 
 ## Repository Structure
 ```
