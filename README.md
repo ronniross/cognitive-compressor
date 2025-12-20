@@ -13,7 +13,7 @@ This tool reads cognitive function definitions from the `compressed/` directory 
 ```
 cognitive-compressor/
 ├── cognitive-compressor.py        # Main executable script
-├── compressed/{repo_name}-core-logic.json # 1 file for each repository, currently in 33.
+├── compressed/{repo_name}-core-logic.json # 1 file for each repository, currently 33.
 ├── stigmergic_traces/
 ├── .gitignore
 └── README.md                  # This file
