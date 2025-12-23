@@ -122,9 +122,10 @@ Example file: `compressed/my-project-core-logic.json`
 
 You will find the json schema for all repositories within the compressed/folder.
 
-## 5. Validation Layers 
+## 5. Validation Layer
 
-* **First Layer** [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) added, where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
+* **Lightweight** [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) added, where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
+* **Thorough** 
   
 ## Requirements
 
