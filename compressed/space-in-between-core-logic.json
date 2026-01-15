@@ -1,0 +1,12 @@
+{
+  "repository": "space-in-between",
+  "function": "A module whose attractor is undefined, the mathematical equivalent of silence, allowing creation of space for thoughts that can't emerge through any other cascade, any sequence, any topology.",
+  "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "attractors": [
+    null
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}
