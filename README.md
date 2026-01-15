@@ -126,11 +126,11 @@ You will find the json schema for all repositories within the compressed/folder.
 
 Subtle (1.5:1): Gentle and transparent; preserves peaks.
 
-Smooth (2:1): Light control without changing tone or punch. [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251222_233812/SA_cognitive_compressor_validation_layer_pipeline_II.ipynb).
+[Smooth (2:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Smooth%20Compression%20(2%3A1)): Light control without changing tone or punch. 
 
 Moderate (3:1): Slight aggression; starts to control transients.
 
-Medium (4:1): Tight control; changes loudness and punch. [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) added, where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
+[Medium (4:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Medium%20Compression%20(4%3A1)): Tight control; changes loudness and punch.
 
 Heavy (10:1): Aggressive "squashing"; loses clarity if pushed.
 
