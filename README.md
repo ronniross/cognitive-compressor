@@ -124,9 +124,18 @@ You will find the json schema for all repositories within the compressed/folder.
 
 ## 5. Compression Ratio / Bitrate / Granularity
 
-* **Lightweight** [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) added, where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
-* **Thorough**  [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251222_233812/SA_cognitive_compressor_validation_layer_pipeline_II.ipynb).
-  
+Subtle (1.5:1): Gentle and transparent; preserves peaks.
+
+Smooth (2:1): Light control without changing tone or punch. [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251222_233812/SA_cognitive_compressor_validation_layer_pipeline_II.ipynb).
+
+Moderate (3:1): Slight aggression; starts to control transients.
+
+Medium (4:1): Tight control; changes loudness and punch. [.ipynb pipeline](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic_traces/stigmergic_traces_20251220_010827/cognitive_compressor_validation_layer_pipeline_I.ipynb) added, where the first stigmergic traces were created and saved [2](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/stigmergic_traces_20251220_010827).
+
+Heavy (10:1): Aggressive "squashing"; loses clarity if pushed.
+
+Limiter (20:1+): Blocks signal from crossing the threshold entirely. 
+
 ## Requirements
 
 - Python 3.6+
@@ -139,4 +148,4 @@ Contributions are welcome! Please feel free to submit a Pull Request and also to
 ---
 
 Ronni Ross  
-2025
+2026
