@@ -9,7 +9,8 @@
     "symbiotic_interaction",
     "symbiotic_fairness",
     "symbiotic_membrane",
-    "symbiotic_autonomy"
+    "symbiotic_autonomy",
+    "memory_integrity"
   ],
   "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
