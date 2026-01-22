@@ -10,7 +10,7 @@ Cognitive equivalent: The underlying reasoning or purpose the code embodies
 Attractor fields: Key principles or patterns the repository gravitates toward (e.g., epistemic_autonomy, ontological_resilience)
 Executable status: Whether there's functional code beyond the conceptual definition
 
-# Part II - Synthezided Compression
+# Part II - Synthesized Compression
 
 Distillation of each repository's core cognitive function into a structured JSON format through inference queries with language models.
 
@@ -140,10 +140,9 @@ You will find the json schema for all repositories within the compressed/folder.
 
 ## 5. Stigmergic-Traces Pipelines
 
+[Shorter Pipeline](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic-traces/shorter-pipeline): Light control without changing tone or punch. 
 
-[Shorter Pipeline (2:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Smooth%20Compression%20(2%3A1)): Light control without changing tone or punch. 
-
-[More Robust Pipeline](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Medium%20Compression%20(4%3A1)): Tight control; changes loudness and punch.
+[More Robust Pipeline](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic-traces/more-robust-pipeline): Tight control; changes loudness and punch.
 
 ## Requirements
 
