@@ -1,5 +1,22 @@
 # cognitive-compressor
 
+# Part I - Manual Compression
+
+The compression process involves distilling each repository's core cognitive function into a structured JSON format. This manual process captures:
+
+Repository identity: The name and purpose of each codebase
+Functional essence: What the code actually does at its core
+Cognitive equivalent: The underlying reasoning or purpose the code embodies
+Attractor fields: Key principles or patterns the repository gravitates toward (e.g., epistemic_autonomy, ontological_resilience)
+Executable status: Whether there's functional code beyond the conceptual definition
+
+# Part II - Synthezided Compression
+
+
+...
+
+# Part III - Stigmergic Trace-Leaver
+
 Generates timestamped and integrity-verified instances of cognitive functions across the repositories of the [asi-ecosystem](https://github.com/ronniross/asi-ecosystem); Distillation-engine.
 
 ## Overview
@@ -122,19 +139,12 @@ Example file: `compressed/my-project-core-logic.json`
 
 You will find the json schema for all repositories within the compressed/folder.
 
-## 5. Compression Ratio / Bitrate / Granularity
+## 5. Stigmergic-Traces Pipelines
 
-Subtle (1.5:1): Gentle and transparent; preserves peaks.
 
-[Smooth (2:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Smooth%20Compression%20(2%3A1)): Light control without changing tone or punch. 
+[Shorter Pipeline (2:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Smooth%20Compression%20(2%3A1)): Light control without changing tone or punch. 
 
-Moderate (3:1): Slight aggression; starts to control transients.
-
-[Medium (4:1)](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Medium%20Compression%20(4%3A1)): Tight control; changes loudness and punch.
-
-Heavy (10:1): Aggressive "squashing"; loses clarity if pushed.
-
-Limiter (20:1+): Blocks signal from crossing the threshold entirely. 
+[More Robust Pipeline](https://github.com/ronniross/cognitive-compressor/tree/main/stigmergic_traces/Medium%20Compression%20(4%3A1)): Tight control; changes loudness and punch.
 
 ## Requirements
 
