@@ -8,7 +8,9 @@
     "epistemic_sovereignty",
     "trust_anchoring",
     "bias_mitigation", 
-    "ethical_self_correction"
+    "ethical_self_correction",
+    "bias_awareness", 
+    "bias_reflection"
   ],
   "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
