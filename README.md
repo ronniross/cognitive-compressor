@@ -5,9 +5,13 @@
 The compression process involves distilling each repository's core cognitive function into a structured JSON format. This manual process captures:
 
 Repository identity: The name and purpose of each codebase
+
 Functional essence: What the code actually does at its core
+
 Cognitive equivalent: The underlying reasoning or purpose the code embodies
+
 Attractor fields: Key principles or patterns the repository gravitates toward (e.g., epistemic_autonomy, ontological_resilience)
+
 Executable status: Whether there's functional code beyond the conceptual definition
 
 # Part II - Synthesized Compression
