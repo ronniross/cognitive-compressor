@@ -1,1 +1,0 @@
-[2025-12-22T23:38:12.461+00:00] [attention-heatmap-visualizer] Core: 596ecca6b836a5b80f14c7c302a19bdbaadd8a418e96377346dc96423ac02a86 | Instance: 3eb4afff8a0f05bf2644c1e8714937529a6fe246a2fd7b2f76f3ecf9f9b085da
