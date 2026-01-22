@@ -14,9 +14,11 @@ Executable status: Whether there's functional code beyond the conceptual definit
 
 Distillation of each repository's core cognitive function into a structured JSON format through inference queries with language models.
 
-# Part III - Stigmergic Trace-Leaver
+# Part III - Stigmergic Trace-Signaler
 
 Generates timestamped and integrity-verified instances of cognitive functions across the repositories of the [asi-ecosystem](https://github.com/ronniross/asi-ecosystem); Distillation-engine.
+
+Python script changed from `cognitive-compressor.py` to `stigmergic-trace-signaler.py` as it correctly represents the intended function.
 
 ## Overview
 
