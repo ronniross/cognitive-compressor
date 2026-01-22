@@ -23,7 +23,7 @@ def get_logic_path(repo_name):
 
 def get_trace_dir():
     """Returns the path to the directory where individual trace files are stored."""
-    return find_repo_root() / "stigmergic_traces"
+    return find_repo_root() / "stigmergic-traces"
 
 def get_trace_filepath(ts):
     """Generates a filename based on the timestamp, replacing colons for filesystem safety."""
@@ -123,3 +123,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
