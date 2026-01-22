@@ -10,7 +10,9 @@
     "trust_anchoring",
     "decision_explanation", 
     "model_debugging", 
-    "visual_interpretability"
+    "visual_interpretability",
+    "interpretability",
+    "transparency"
   ],
   "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
