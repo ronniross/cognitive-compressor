@@ -9,7 +9,9 @@
     "model_interpretability",
     "visual_debugging",
     "visual_analysis",
-    "cognitive_transparency"
+    "cognitive_transparency",
+    "interpretability",
+    "transparency"
   ],
   "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
