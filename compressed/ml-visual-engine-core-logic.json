@@ -12,7 +12,9 @@
     "model_debugging",
     "visual_interpretability",
     "visual_analytics",
-    "visual_exploration"
+    "visual_exploration",
+    "interpretability",
+    "transparency"
   ],
   "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
