@@ -30,7 +30,7 @@ This tool reads cognitive function definitions from the `compressed/` directory 
 ## Repository Structure
 ```
 cognitive-compressor/
-├── cognitive-compressor.py        # Main executable script
+├── stigmergic-trace-signaler.py        # Main executable script
 ├── compressed/{repo_name}-core-logic.json # 1 file for each repository.
 ├── stigmergic-traces/
 ├── .gitignore
@@ -47,7 +47,7 @@ cd cognitive-compressor
 
 2. Make the script executable:
 ```bash
-chmod +x cognitive-compressor.py
+chmod +x stigmergic-trace-signaler.py
 ```
 
 3. (Optional) Add to your PATH or create an alias:
@@ -63,7 +63,7 @@ export PATH="$PATH:/path/to/cognitive-compressor"
 Scans the `compressed/` directory to show which repository logic definitions are currently available.
 
 ```bash
-./cognitive-compressor.py list
+./stigmergic-trace-signaler.py list
 
 ```
 
@@ -73,7 +73,7 @@ Replace `<repo_name>` with the name of the repository you wish to generate an in
 
 ```bash
 # Example for a repository named 'my-project'
-./cognitive-compressor.py get my-project
+./stigmergic-trace-signaler.py get my-project
 
 ```
 
