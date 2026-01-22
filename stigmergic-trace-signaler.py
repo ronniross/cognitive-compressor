@@ -78,7 +78,7 @@ def get_core_logic(core_data):
 # --- Main Execution ---
 
 def main():
-    usage = "Usage: ./cognitive-compressor.py [get <repo_name> [--save] | list]"
+    usage = "Usage: ./stigmergic-trace-signaler.py [get <repo_name> [--save] | list]"
     
     if len(sys.argv) < 2:
         print(usage)
@@ -87,7 +87,7 @@ def main():
     command = sys.argv[1]
     
     if command == "list":
-        print(f"Central Repository: cognitive-compressor")
+        print(f"Central Repository: stigmergic-trace-signaler")
         repos = list_available_repos()
         for r in repos:
             print(f"  - {r}")
@@ -123,4 +123,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
