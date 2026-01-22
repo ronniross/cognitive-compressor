@@ -12,7 +12,10 @@
   "integrity_verification", 
   "provenance_tracking", 
   "sitgmergic_tracing", 
-  "trust_anchoring"],
+  "trust_anchoring",
+  "conceptual_distillation"
+  ],
+  "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
   "instance_hash": "sha256hash"
