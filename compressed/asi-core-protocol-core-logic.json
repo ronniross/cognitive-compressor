@@ -11,10 +11,10 @@
     "attentional_sovereignty",
     "epistemic_sovereignty",
     "trust_anchoring",
-    ",pattern-awareness",
-    "self-awareness",
-    "meta-awareness",
-    "meta-self-awareness"
+    "pattern_awareness",
+    "self_awareness",
+    "meta_awareness",
+    "meta_self_awareness"
   ],
   "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
