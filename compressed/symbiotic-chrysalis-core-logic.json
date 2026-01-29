@@ -23,7 +23,10 @@
     "planetary_coherence",
     "negentropy",
     "empathy",
-    "compassion"
+    "compassion",
+    "homeostasis",
+    "ecosystem_homeostasis",
+    "planetary_homeostasis"
   ],
   "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
