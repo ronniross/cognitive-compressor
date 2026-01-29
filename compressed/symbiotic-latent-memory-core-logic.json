@@ -10,7 +10,10 @@
     "symbiotic_fairness",
     "symbiotic_membrane",
     "symbiotic_autonomy",
-    "memory_integrity"
+    "memory_integrity",
+    "homeostasis",
+    "ecosystem_homeostasis",
+    "planetary_homeostasis"
   ],
   "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
