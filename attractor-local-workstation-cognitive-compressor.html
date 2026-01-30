@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive Compressor - Workstation</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- JSZip Library for creating ZIP files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <style>
+        :root {
+            --bg-primary: #0a0e14;
+            --bg-secondary: #13171f;
+            --bg-tertiary: #1c2028;
+            --accent-primary: #00d9ff;
+            --accent-secondary: #ff00aa;
+            --accent-tertiary: #7e5bef;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --border-color: #30363d;
+            --success: #3fb950;
+            --warning: #d29922;
+            --error: #f85149;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+
+        /* Header */
+        header { text-align: center; margin-bottom: 3rem; padding: 3rem 0; position: relative; }
+        h1 { font-family: 'Crimson Pro', serif; font-size: 3.5rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { color: var(--text-secondary); margin-bottom: 1rem; }
+
+        /* Sync Panel */
+        .sync-panel { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .sync-status { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
+        .status-info { display: flex; flex-direction: column; gap: 0.5rem; }
+        .status-label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .status-value { font-size: 1.1rem; color: var(--text-primary); font-weight: 600; }
+        .commit-hash { font-family: 'JetBrains Mono', monospace; background: var(--bg-tertiary); padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); color: var(--accent-primary); }
+        .sync-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        /* Buttons */
+        .btn { padding: 0.75rem 1.25rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); cursor: pointer; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn:hover { background: var(--bg-primary); border-color: var(--accent-primary); }
+        .btn-primary { background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary)); border: none; }
+        .btn-success { background: var(--success); border: none; color: white; }
+        .btn-danger { background: var(--error); border: none; color: white; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Controls & Filters */
+        .controls { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; }
+        .controls-row { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .search-box { flex: 1; position: relative; min-width: 300px; }
+        .search-box input { width: 100%; padding: 0.75rem 1rem 0.75rem 2.5rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-primary); font-family: 'JetBrains Mono'; }
+        
+        .filter-panel { border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1.5rem; }
+        .attractor-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .attractor-badge { padding: 0.4rem 0.8rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 20px; font-size: 0.85rem; cursor: pointer; }
+        .attractor-badge.selected { background: var(--accent-tertiary); color: white; }
+        
+        /* Repository Cards */
+        .repo-card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 12px; margin-bottom: 1.5rem; transition: 0.3s; }
+        .repo-header { padding: 2rem; display: flex; justify-content: space-between; align-items: flex-start; }
+        .repo-title { font-family: 'Crimson Pro', serif; font-size: 1.8rem; }
+        .status-badge { padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.7rem; text-transform: uppercase; }
+        .status-executable { background: rgba(63, 185, 80, 0.2); color: var(--success); border: 1px solid var(--success); }
+        .status-conceptual { background: rgba(210, 153, 34, 0.2); color: var(--warning); border: 1px solid var(--warning); }
+        
+        .attractors-section { padding: 0 2rem 1.5rem 2rem; }
+        .repo-attractors { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .repo-attractor { padding: 0.3rem 0.8rem; background: rgba(126, 91, 239, 0.1); border: 1px solid var(--accent-tertiary); border-radius: 20px; font-size: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+        .remove-attractor { background: none; border: none; color: var(--error); cursor: pointer; font-weight: bold; }
+        .add-attractor-btn { padding: 0.3rem 0.8rem; background: transparent; border: 1px dashed var(--border-color); border-radius: 20px; color: var(--text-muted); cursor: pointer; font-size: 0.8rem; }
+        .add-attractor-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+
+        .expanded-details { display: none; padding: 2rem; border-top: 1px solid var(--border-color); background: var(--bg-tertiary); }
+        .expanded-details.show { display: block; }
+        
+        /* Modals & Logs */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; z-index: 1000; }
+        .modal-overlay.show { display: flex; }
+        .modal { background: var(--bg-secondary); padding: 2rem; border-radius: 12px; width: 400px; border: 1px solid var(--border-color); }
+        .form-select, .form-input { width: 100%; padding: 0.5rem; margin-top: 0.5rem; background: var(--bg-tertiary); border: 1px solid var(--border-color); color: white; border-radius: 4px; }
+        .log-container { background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; max-height: 150px; overflow-y: auto; font-size: 0.8rem; margin-top: 1rem; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cognitive Compressor</h1>
+            <p class="subtitle">Attractor Local Workstation</p>
+        </header>
+
+        <!-- Sync Panel -->
+        <div class="sync-panel">
+            <div class="sync-status">
+                <div class="status-info">
+                    <span class="status-label">Repository Status</span>
+                    <span class="status-value" id="repoStatus">No data loaded</span>
+                </div>
+                <div class="status-info">
+                    <span class="status-label">Last Commit</span>
+                    <code class="commit-hash" id="commitHash">Not synced</code>
+                </div>
+                <div class="status-info">
+                    <span class="status-label">Loaded Repositories</span>
+                    <span class="status-value" id="loadedCount">0</span>
+                </div>
+            </div>
+
+            <div class="sync-actions">
+                <button class="btn btn-primary" onclick="loadFromGitHub()">Load Latest from GitHub</button>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Load Local Files</button>
+                <button class="btn btn-success" id="saveToLocal" onclick="saveToLocal()" disabled>Save Bundle (ZIP)</button>
+                <button class="btn btn-danger" onclick="clearAllData()">Clear Data</button>
+            </div>
+            <div class="log-container" id="logContainer"></div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="controls-row">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search repositories...">
+                </div>
+                <button class="btn" id="filterToggleBtn">Filter by Attractors</button>
+                <button class="btn btn-primary" onclick="openBulkModal()">Bulk Add Attractor</button>
+            </div>
+
+            <div class="filter-panel" id="filterPanel" style="display: none;">
+                <div class="attractor-badges" id="filterAttractors"></div>
+            </div>
+        </div>
+
+        <div id="resultsCount"></div>
+        <div id="repositoriesContainer"></div>
+        
+        <div class="empty-state" id="emptyState" style="text-align:center; padding: 4rem; display: none;">
+            <h3 style="font-family: 'Crimson Pro'; font-size: 1.5rem;">No repositories loaded</h3>
+        </div>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="fileInput" multiple accept=".json" style="display: none;" onchange="handleFileSelect(event)">
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="addAttractorModal">
+        <div class="modal">
+            <h3>Add Attractor to <span id="modalRepoName"></span></h3>
+            <select class="form-select" id="selectAttractor"></select>
+            <div style="text-align: center; margin: 10px 0;">OR</div>
+            <input type="text" class="form-input" id="customAttractor" placeholder="New attractor name">
+            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="handleAddAttractor()">Add</button>
+            <button class="btn" style="margin-top: 0.5rem; width: 100%;" onclick="closeAddModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="bulkAddModal">
+        <div class="modal">
+            <h3>Add Attractor to All</h3>
+            <select class="form-select" id="bulkSelectAttractor"></select>
+            <input type="text" class="form-input" id="bulkCustomAttractor" placeholder="New attractor name">
+            <button class="btn btn-primary" style="margin-top: 1rem; width: 100%;" onclick="handleBulkAdd()">Add to All</button>
+            <button class="btn" style="margin-top: 0.5rem; width: 100%;" onclick="closeBulkModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // State
+        let repositories = [];
+        let allAttractors = new Set();
+        let selectedAttractors = new Set();
+        let searchTerm = '';
+        let expandedRepos = new Set();
+        let currentModalRepo = null;
+        
+        // NEW: Session Tracking Array
+        let sessionLogs = [];
+
+        const STORAGE_REPOS_KEY = 'cognitive_compressor_repos';
+        const GITHUB_API_BASE = 'https://api.github.com/repos/ronniross/cognitive-compressor';
+
+        // Initialize
+        window.addEventListener('load', () => {
+            loadFromLocalStorage();
+            updateUI();
+            setupListeners();
+        });
+
+        function setupListeners() {
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                searchTerm = e.target.value;
+                filterAndRender();
+            });
+            document.getElementById('filterToggleBtn').addEventListener('click', () => {
+                const panel = document.getElementById('filterPanel');
+                panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+
+        // --- Data Loading & Syncing ---
+        async function loadFromGitHub() {
+            const btn = event.target;
+            btn.disabled = true;
+            addLog('Fetching from GitHub...', 'info');
+            
+            try {
+                const commitResp = await fetch(`${GITHUB_API_BASE}/commits/main`);
+                const commitData = await commitResp.json();
+                const hash = commitData.sha.substring(0, 7);
+                document.getElementById('commitHash').textContent = hash;
+
+                const contentsResp = await fetch(`${GITHUB_API_BASE}/contents/compressed`);
+                const contents = await contentsResp.json();
+                const files = contents.filter(f => f.name.endsWith('-core-logic.json'));
+
+                const loaded = [];
+                for(let file of files) {
+                    const res = await fetch(file.download_url);
+                    if(res.ok) loaded.push(await res.json());
+                }
+
+                if(loaded.length > 0) {
+                    repositories = loaded;
+                    // Reset logs on new load
+                    sessionLogs = [];
+                    logAction('SYSTEM', 'Data loaded from GitHub', { count: loaded.length, commit: hash });
+                    
+                    refreshAttractors();
+                    saveToLocalStorage();
+                    filterAndRender();
+                    addLog(`Loaded ${loaded.length} repos`, 'success');
+                }
+            } catch (err) {
+                addLog('Error fetching GitHub: ' + err.message, 'error');
+            } finally {
+                btn.disabled = false;
+                updateUI();
+            }
+        }
+
+        function handleFileSelect(e) {
+            const files = e.target.files;
+            const loaded = [];
+            let processed = 0;
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    loaded.push(JSON.parse(event.target.result));
+                    processed++;
+                    if(processed === files.length) {
+                        repositories = loaded;
+                        // Reset logs on new load
+                        sessionLogs = [];
+                        logAction('SYSTEM', 'Data loaded from local files', { count: loaded.length });
+                        
+                        refreshAttractors();
+                        saveToLocalStorage();
+                        filterAndRender();
+                        updateUI();
+                    }
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        // --- NEW: ZIP Saving Logic ---
+        async function saveToLocal() {
+            if (repositories.length === 0) return;
+
+            const btn = document.getElementById('saveToLocal');
+            const originalText = btn.textContent;
+            btn.textContent = "Zipping...";
+            btn.disabled = true;
+
+            try {
+                // Initialize JSZip
+                const zip = new JSZip();
+                
+                // Create folder 'compressed_logic'
+                const folder = zip.folder("compressed_logic");
+
+                // Add all repositories to the folder
+                repositories.forEach(repo => {
+                    const fileName = `${repo.repository}-core-logic.json`;
+                    folder.file(fileName, JSON.stringify(repo, null, 2));
+                });
+
+                // Create session_metadata.json in the root
+                const metadata = {
+                    export_timestamp: new Date().toISOString(),
+                    total_repositories: repositories.length,
+                    session_logs: sessionLogs
+                };
+                zip.file("session_metadata.json", JSON.stringify(metadata, null, 2));
+
+                // Generate ZIP blob
+                const content = await zip.generateAsync({type: "blob"});
+                
+                // Trigger Download
+                const url = URL.createObjectURL(content);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "cognitive_compressor_bundle.zip";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                
+                // Log the save action
+                addLog("Bundle saved as ZIP.", "success");
+            } catch (err) {
+                console.error(err);
+                addLog("Error creating ZIP: " + err.message, "error");
+            } finally {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        function clearAllData() {
+            if(!confirm('Clear all data?')) return;
+            repositories = [];
+            sessionLogs = [];
+            localStorage.removeItem(STORAGE_REPOS_KEY);
+            filterAndRender();
+            updateUI();
+        }
+
+        // --- NEW: Tracking Helper ---
+        function logAction(type, description, details = {}) {
+            const entry = {
+                timestamp: new Date().toISOString(),
+                type: type,
+                description: description,
+                details: details
+            };
+            sessionLogs.push(entry);
+        }
+
+        // --- Logic & Rendering ---
+        function filterAndRender() {
+            let filtered = repositories.filter(repo => {
+                const searchLower = searchTerm.toLowerCase();
+                const searchMatch = !searchTerm || 
+                    repo.repository.toLowerCase().includes(searchLower) ||
+                    repo.function.toLowerCase().includes(searchLower);
+                
+                const attrMatch = selectedAttractors.size === 0 || 
+                    (repo.attractors && Array.from(selectedAttractors).every(a => repo.attractors.includes(a)));
+                
+                return searchMatch && attrMatch;
+            });
+
+            renderRepositories(filtered);
+            renderAttractors();
+            document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${repositories.length} repositories`;
+            document.getElementById('emptyState').style.display = filtered.length === 0 ? 'block' : 'none';
+        }
+
+        function renderRepositories(repos) {
+            const container = document.getElementById('repositoriesContainer');
+            container.innerHTML = repos.map(repo => {
+                const isExpanded = expandedRepos.has(repo.repository);
+                const statusClass = repo.executable_code_beyond_this_function ? 'status-executable' : 'status-conceptual';
+                const statusText = repo.executable_code_beyond_this_function ? 'Executable' : 'Conceptual';
+                
+                return `
+                    <div class="repo-card">
+                        <div class="repo-header">
+                            <div class="repo-info">
+                                <div style="display:flex; align-items:center; gap: 1rem; margin-bottom: 0.5rem;">
+                                    <h2 class="repo-title">${repo.repository}</h2>
+                                    <span class="status-badge ${statusClass}">${statusText}</span>
+                                </div>
+                                <p style="color: var(--text-primary); margin-bottom: 0.25rem;">${repo.function}</p>
+                                <p style="color: var(--text-secondary); font-style: italic; font-size: 0.9rem;">${repo.latent_cognitive_equivalent}</p>
+                            </div>
+                            <button class="btn" onclick="toggleExpand('${repo.repository}')">${isExpanded ? 'Collapse' : 'Details'}</button>
+                        </div>
+                        <div class="attractors-section">
+                            <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Attractors</span>
+                            <div class="repo-attractors">
+                                ${(repo.attractors || []).map(att => `
+                                    <div class="repo-attractor">
+                                        ${att}
+                                        <button class="remove-attractor" onclick="removeAttractor('${repo.repository}', '${att}')">×</button>
+                                    </div>
+                                `).join('')}
+                                <button class="add-attractor-btn" onclick="openAddModal('${repo.repository}')">+ Add</button>
+                            </div>
+                        </div>
+                        <div class="expanded-details ${isExpanded ? 'show' : ''}">
+                            <p><strong>Full Path:</strong> <code>compressed/${repo.repository}-core-logic.json</code></p>
+                            <p style="margin-top: 1rem;"><strong>Executable Status:</strong> ${repo.executable_code_beyond_this_function ? 'Full Logic' : 'Conceptual Only'}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderAttractors() {
+            const container = document.getElementById('filterAttractors');
+            const sorted = Array.from(allAttractors).sort();
+            container.innerHTML = sorted.map(att => `
+                <div class="attractor-badge ${selectedAttractors.has(att) ? 'selected' : ''}" onclick="toggleAttractorFilter('${att}')">
+                    ${att}
+                </div>
+            `).join('');
+        }
+
+        // --- Event Handlers & State Updates ---
+        function toggleAttractorFilter(att) {
+            if(selectedAttractors.has(att)) selectedAttractors.delete(att);
+            else selectedAttractors.add(att);
+            filterAndRender();
+        }
+
+        function toggleExpand(repoName) {
+            if(expandedRepos.has(repoName)) expandedRepos.delete(repoName);
+            else expandedRepos.add(repoName);
+            filterAndRender();
+        }
+
+        function removeAttractor(repoName, att) {
+            const repo = repositories.find(r => r.repository === repoName);
+            if(repo && repo.attractors) {
+                repo.attractors = repo.attractors.filter(a => a !== att);
+                
+                // TRACKING
+                logAction('REMOVE_ATTRACTOR', `Removed '${att}' from ${repoName}`, { repository: repoName, attractor: att });
+                
+                saveToLocalStorage();
+                refreshAttractors();
+                filterAndRender();
+            }
+        }
+
+        // --- Modals ---
+        function openAddModal(repoName) {
+            currentModalRepo = repoName;
+            populateSelect('selectAttractor');
+            document.getElementById('addAttractorModal').classList.add('show');
+        }
+        function closeAddModal() { document.getElementById('addAttractorModal').classList.remove('show'); }
+
+        function openBulkModal() {
+            populateSelect('bulkSelectAttractor');
+            document.getElementById('bulkAddModal').classList.add('show');
+        }
+        function closeBulkModal() { document.getElementById('bulkAddModal').classList.remove('show'); }
+
+        function populateSelect(id) {
+            const sel = document.getElementById(id);
+            sel.innerHTML = '<option value="">-- Existing --</option>' + 
+                Array.from(allAttractors).map(a => `<option value="${a}">${a}</option>`).join('');
+        }
+
+        function handleAddAttractor() {
+            const sel = document.getElementById('selectAttractor').value;
+            const custom = document.getElementById('customAttractor').value;
+            const val = custom || sel;
+            if(!val) return;
+            const repo = repositories.find(r => r.repository === currentModalRepo);
+            if(repo) {
+                if(!repo.attractors) repo.attractors = [];
+                if(!repo.attractors.includes(val)) {
+                    repo.attractors.push(val);
+                    
+                    // TRACKING
+                    logAction('ADD_ATTRACTOR', `Added '${val}' to ${currentModalRepo}`, { repository: currentModalRepo, attractor: val });
+                }
+            }
+            allAttractors.add(val);
+            saveToLocalStorage();
+            closeAddModal();
+            refreshAttractors();
+            filterAndRender();
+        }
+
+        function handleBulkAdd() {
+            const sel = document.getElementById('bulkSelectAttractor').value;
+            const custom = document.getElementById('bulkCustomAttractor').value;
+            const val = custom || sel;
+            if(!val) return;
+            
+            let count = 0;
+            repositories.forEach(r => {
+                if(!r.attractors) r.attractors = [];
+                if(!r.attractors.includes(val)) {
+                    r.attractors.push(val);
+                    count++;
+                }
+            });
+            
+            // TRACKING
+            logAction('BULK_ADD', `Bulk added '${val}' to ${count} repositories`, { attractor: val, affected_count: count });
+
+            allAttractors.add(val);
+            saveToLocalStorage();
+            closeBulkModal();
+            refreshAttractors();
+            filterAndRender();
+        }
+
+        // --- Helpers ---
+        function refreshAttractors() {
+            allAttractors.clear();
+            repositories.forEach(r => (r.attractors || []).forEach(a => allAttractors.add(a)));
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem(STORAGE_REPOS_KEY, JSON.stringify(repositories));
+            updateUI();
+        }
+
+        function loadFromLocalStorage() {
+            const data = localStorage.getItem(STORAGE_REPOS_KEY);
+            if(data) {
+                repositories = JSON.parse(data);
+                refreshAttractors();
+                filterAndRender();
+            }
+        }
+
+        function updateUI() {
+            document.getElementById('repoStatus').textContent = repositories.length > 0 ? 'Loaded' : 'No data';
+            document.getElementById('loadedCount').textContent = repositories.length;
+            document.getElementById('saveToLocal').disabled = repositories.length === 0;
+        }
+
+        function addLog(msg, type) {
+            const container = document.getElementById('logContainer');
+            container.style.display = 'block';
+            const div = document.createElement('div');
+            div.style.color = type === 'error' ? 'var(--error)' : type === 'success' ? 'var(--success)' : 'var(--accent-primary)';
+            div.textContent = `> ${new Date().toLocaleTimeString()}: ${msg}`;
+            container.prepend(div);
+        }
+    </script>
+</body>
+</html>
