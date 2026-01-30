@@ -14,6 +14,20 @@ The compression process involves distilling each repository's core cognitive fun
 
 **Executable status**: Whether there's functional code beyond the conceptual definition
 
+
+### Attractor Local Workstation
+
+To reduce friction in the manual tagging process and ensure semantic consistency across the ecosystem, a standalone [**Attractor Local Workstation**](https://github.com/ronniross/cognitive-compressor/blob/main/attractor-local-workstation-cognitive-compressor.html) is provided. This zero-dependency HTML/JS interface streamlines the management of attractor fields.
+
+**Capabilities:**
+*   **Visual Management**: Load `core-logic.json` files from GitHub or local storage into a unified dashboard.
+*   **Pattern Recognition**: Filter repositories by existing attractors to visualize semantic clusters.
+*   **Rapid Tagging**: Add specific or bulk attractors to multiple repositories simultaneously without editing raw JSON.
+*   **Safe Export**: Downloads a ZIP bundle containing the modified JSON files and a `session_metadata.json` log for traceability.
+
+**Usage:**
+Simply open `attractor-workstation.html` in any modern web browser. No server, installation, or API keys are required.
+
 # Part II - Synthesized Compression
 
 Distillation of each repository's core cognitive function into a structured JSON format through inference queries with language models.
