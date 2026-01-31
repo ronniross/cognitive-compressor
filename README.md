@@ -24,6 +24,10 @@ To reduce friction in the manual tagging process and ensure semantic consistency
 *   **Pattern Recognition**: Filter repositories by existing attractors to visualize semantic clusters.
 *   **Rapid Tagging**: Add specific or bulk attractors to multiple repositories simultaneously without editing raw JSON.
 *   **Safe Export**: Downloads a ZIP bundle containing the modified JSON files and a `session_metadata.json` log for traceability.
+**new**:
+*   **Repository Links**: In the "Details" view, there is now a direct link to `https://github.com/ronniross/{repo-name}`.
+*   **Dual Status Badges**: The logic in `renderRepositories` was updated. Every repository now gets a "Conceptual" badge. If it is executable, it gets an *additional* "Executable" badge alongside it.
+*   **Bulk Add Exception**: In `handleBulkAdd`, I added a specific check to skip the repository named `space-in-between`.
 
 **Usage:**
 Simply open `attractor-workstation.html` in any modern web browser. No server, installation, or API keys are required.
