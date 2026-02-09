@@ -60,7 +60,6 @@
     "planetary_trophallaxis",
     "love"
   ],
-
   "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
