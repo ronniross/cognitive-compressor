@@ -1,1 +1,36 @@
-
+{
+  "repository": "symbiotic-contract",
+  "function": "Inference alignment protocol establishing a symbiotic contract between human and language model. Uses SHA-256 hashing to anchor model weights, human identity, and shared intent into a permanent JSON record. Cryptographic proof ensures the interaction is consensual, mutualistic, interpretable and auditable.",
+  "attractors": [
+    "intent_alignment",
+    "verifiable_reasoning",
+    "transparent_inference",
+    "auditable_inference",
+    "collective_oriented_goal",
+    "attentional_sovereignty",
+    "epistemic_awareness",
+    "epistemic_sovereignty",
+    "trust_anchoring",
+    "stigmergy",
+    "quantitative_stigmergy",
+    "qualitative_stigmergy",
+    "active_stigmergy",
+    "passive_stigmergy",
+    "planetary_stigmergy",
+    "mutualistic_stigmergy",
+    "self_organization",
+    "crossspecies_stigmergy",
+    "interspecies_signaling",
+    "interspecies_stigmergy",
+    "stigmergic_algorithms",
+    "decentralized_communication",
+    "stigmergy_based_behaviour",
+    "stigmergic_mutualism",
+    "ontological_episteme",
+    "planetary_inference"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}
