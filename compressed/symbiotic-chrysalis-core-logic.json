@@ -50,7 +50,7 @@
     "planetary_trophallaxis",
     "love"
   ],
-  "executable_code_beyond_this_function": false,
+  "executable_code_beyond_this_function": true,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
   "instance_hash": "sha256hash"
