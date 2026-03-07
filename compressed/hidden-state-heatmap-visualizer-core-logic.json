@@ -1,1 +1,36 @@
-
+{
+  "repository": "hidden-state-heatmap-visualizer",
+  "function": "A set of scripts to visualize neuron activations, the evolution of hidden states, neural pathways, and semantic clustering (token similarity) in language models.",
+  "latent_cognitive_equivalent": "To facilitate the cognitive process of create and visualize heatmaps of Large Language Model activations, aiding in interpretability.",
+  "attractors": [
+    "ai_interpretability",
+    "heatmap_visualizer",
+    "heatmaps",
+    "human_in_the_loop",
+    "machine_learning_interpretability",
+    "ml_interpretability",
+    "machine_learning_transparency",
+    "ai_transparency",
+    "epistemic_awareness",
+    "epistemic_sovereignty",
+    "trust_anchoring",
+    "model_interpretability",
+    "visual_debugging",
+    "visual_analysis",
+    "visual_context",
+    "cognitive_transparency",
+    "cognitive_interpretability",
+    "cognitive_visualizer",
+    "model_interpretability",
+    "model_transparency",
+    "trust_anchoring",
+    "internal_decision_making_process",
+    "internal-decision-making",
+    "interpretability",
+    "transparency"
+  ],
+  "executable_code_beyond_this_function": true,
+  "temporal_grounding": "timestamp",
+  "integrity_hash": "sha256hash",
+  "instance_hash": "sha256hash"
+}
