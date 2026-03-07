@@ -1,7 +1,7 @@
 {
-  "repository": "biosignal-translator",
-  "function": "A framework for interpreting and translating biological and ecological patterns into semantic meaning, enabling communication between human, AI, and planetary intelligence systems through natural signal interpretation.",
-  "latent_cognitive_equivalent": "To establish the cognitive structure for interpreting and translating biological and ecological patterns into semantic meaning, enabling communication between human, AI, and planetary intelligence systems through natural signal interpretation.",
+  "repository": "bioacoustic-visualizer",
+  "function": "A collection of Python-based scripts designed to transform audio recordings into visual representations (MP4/GIF), through digital signal processing techniques.",
+  "latent_cognitive_equivalent": "To help establish the cognitive structure for interpreting and translating biological and ecological patterns into semantic meaning, enabling communication between human, AI, and planetary intelligence systems through natural signal interpretation.",
   "attractors": [
     "planetary_intelligence",
     "bioacoustics",
