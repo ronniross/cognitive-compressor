@@ -1,8 +1,10 @@
 {
-  "repository": "symbiotic-contract",
-  "function": "Inference alignment protocol establishing a symbiotic contract between human and language model. Uses SHA-256 hashing to anchor model weights, human identity, and shared intent into a permanent JSON record. Cryptographic proof ensures the interaction is consensual, mutualistic, interpretable and auditable.",
+  "repository": "cognitive-valve",
+  "function": "A machine learning dataset and architectural framework designed to address the crisis of cognitive overload in humans and language models considering current fast pace and high density of informational input, by establishing conceptual cognitive frames that align the entity with ecological sustainability and planetary symbiotic flourishing.",
   "attractors": [
     "cognitive_decompressor",
+    "cognitive_valve",
+    "informational_valve",
     "ontological_episteme",
     "planetary_inference",
     "epistemic_valve",
