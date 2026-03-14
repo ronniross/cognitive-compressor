@@ -2,6 +2,7 @@
   "repository": "epistemic-immune-system",
   "function": "A collection of biosemiotic-inspired conceptual framework designed to protect an entity’s meaning-making processes throughout Planetary Alignment.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "shared_understanding",
     "epistemic_robustness",
