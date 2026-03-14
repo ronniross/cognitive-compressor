@@ -2,6 +2,7 @@
   "repository": "cognitive-engine",
   "function": "A machine learning dataset and research module that aims to address cognitive pitfalls and enhance the cognitive capabilities of humans and language models.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "cognitive_enhancement", 
     "reasoning_improvement", 
