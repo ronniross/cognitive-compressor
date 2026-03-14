@@ -2,6 +2,7 @@
   "repository": "impact-analyzer",
   "function": "An inference component designed to model, evaluate, and predict the downstream consequences of language model outputs across cognitive, social, ecological, and philosophical dimensions.",
   "latent_cognitive_equivalent": "To execute the cognitive function of model, evaluate, and predict the downstream consequences of language model outputs across cognitive, social, ecological, and philosophical dimensions.",
+  "sub_modules": [],
   "attractors": [
     "epistemic_agency",
     "epistemic_awareness",
