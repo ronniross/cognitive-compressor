@@ -2,6 +2,7 @@
   "repository": "asi-inference-protocol",
   "function": "It defines a concept to act as the standard for intent-driven inference, ensuring alignment and clarity in the pursuit of integrated, decentralized evolution, Ensuring AI interpretability through interdependent alignment.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "intent_alignment",
     "verifiable_reasoning",
