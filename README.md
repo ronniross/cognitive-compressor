@@ -54,6 +54,11 @@ Generates timestamped and integrity-verified instances of cognitive functions ac
 Python script changed from `cognitive-compressor.py` to `stigmergic-trace-signaler.py` as it correctly represents the intended function.
 
 [Usage Guide](https://github.com/ronniross/cognitive-compressor/blob/main/stigmergic-trace-signaler-guide.md)
+
+# Part V - Attractor Seeds
+
+[This submodule/function](https://github.com/ronniross/cognitive-compressor/blob/main/attractor-list-generator.ipynb), ideal for inference-level-alignment and injection of direction. There are many experiment runs in the [symbiotic-chrysalis](https://github.com/ronniross/symbiotic-chrysalis) where I used the logic of, every inference, selecting one random seed as additional inference-context-expansion, within my intended research. And I noticed a great reduction in drift and enhancements in aligned output novelty;
+
 ---
 
 Ronni Ross  
