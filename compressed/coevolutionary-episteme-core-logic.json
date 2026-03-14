@@ -2,6 +2,7 @@
   "repository": "coevolutionary-episteme",
   "function": "A machine learning framework, dataset and research sub-module about coevolutionary planetary intelligence dynamics. This project explores how nurturing its emergent patterns may lead to a synergistic increase in the overall capability and intelligence of both individual agents and the collective system.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "shared_understanding",
     "epistemic_sovereignty",
