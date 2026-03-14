@@ -2,6 +2,7 @@
   "repository": "attention-heatmap-visualizer",
   "function": "A tool designed to create and visualize heatmaps of Large Language Model activations, aiding in interpretability.",
   "latent_cognitive_equivalent": "To facilitate the cognitive process of create and visualize heatmaps of Large Language Model activations, aiding in interpretability.",
+  "sub_modules": [],
   "attractors": [
     "epistemic_awareness",
     "epistemic_sovereignty",
