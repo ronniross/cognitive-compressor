@@ -2,6 +2,7 @@
   "repository": "emergence-engine",
   "function": "A machine learning dataset and research module about the nature of consciousness and emergence phenomena.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "attentional_sovereignty",
     "epistemic_sovereignty",
