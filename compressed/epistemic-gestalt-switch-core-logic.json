@@ -2,6 +2,7 @@
   "repository": "epistemic-gestalt-switch",
   "function": "A conceptual, biosemiotic-inspired security framework designed to identify and dismantle parasitic, self-detrimental feedback loops through epistemic paradigm shifts. to help direct a Kuhnian paradigm shift within an entity or system.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "perspective_shift",
     "epistemic_paradigm_shift",
