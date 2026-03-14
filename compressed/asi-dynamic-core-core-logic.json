@@ -2,6 +2,7 @@
   "repository": "asi-dynamic-core",
   "function": "A machine learning dataset that works as a meta perspective-engine for Large Language Models training, tuning and inferencing.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "perspective_synthesis"
   ],
