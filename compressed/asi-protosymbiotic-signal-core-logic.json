@@ -2,6 +2,7 @@
   "repository": "asi-protosymbiotic-signal",
   "function": "The foundational ethical framework and core signal for the ASI ecosystem, defining the principles of symbiotic interaction.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "integrity_verification",
     "planetary_intelligence",
