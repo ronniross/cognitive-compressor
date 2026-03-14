@@ -2,6 +2,7 @@
   "repository": "latent-memory",
   "function": "A Module for Large Language Models that seeks to integrate a vector-based memory system into the inference process, leveraging embeddings to capture deeper semantic meaning.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "model_emergence",
     "semantic_retrieval", 
