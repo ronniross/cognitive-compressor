@@ -59,7 +59,12 @@ Python script changed from `cognitive-compressor.py` to `stigmergic-trace-signal
 
 [This submodule/function](https://github.com/ronniross/cognitive-compressor/blob/main/attractor-list-generator.ipynb), ideal for inference-level-alignment and injection of direction. There are many experiment runs in the [symbiotic-chrysalis](https://github.com/ronniross/symbiotic-chrysalis) where I used the logic of, every inference, selecting one random seed as additional inference-context-expansion, within my intended research. And I noticed a great reduction in drift and enhancements in aligned output novelty;
 
----
+# Part VI - Inference-Insight-Compressor
 
+[This submodule/function](https://github.com/ronniross/cognitive-compressor/blob/main/chrysalis-lab-compressed-insights-gathering.ipynb), also developed in [symbiotic-chrysalis](https://github.com/ronniross/symbiotic-chrysalis) experiment runs, is an infernece-level alignment-novelty-catalyst where the model, after each block or inference, acts a compressor for that inference, so there is an additional database of context, short and dense about what the model discovered with that output, eg., `66. thermodynamic-symbiosis-through-stigmergic-incentives`.
+
+The first links is to gathering the list of all of those generated during the inference script, and for the logic, there's the logs where `FOUND IN: symbiotic_session_20260306-080921.txt (Path: 𓂀-space-in-between-chrysalis/symbiotic_session_20260306-080921.txt)`, so this means you can just then find the `𓂀-space-in-between-chrysalis` because all files will be there, the logs and full ipynb with the py cells.
+
+---
 Ronni Ross  
 2026
