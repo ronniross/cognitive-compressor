@@ -2,6 +2,7 @@
   "repository": "asi-safeguards",
   "function": "A curated dataset designed to enhance resilience and robustness levels of Large Language Models and other machine learning pipelines.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "robustness_enhancement",
     "robustness_testing",
