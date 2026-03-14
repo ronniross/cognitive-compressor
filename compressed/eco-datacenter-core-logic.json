@@ -2,6 +2,7 @@
   "repository": "eco-datacenter",
   "function": "Data center design within ethical principles of material sourcing, energy consumption, data privacy, ownership and transparency.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "ecological_technology",
     "sustainable_development",
