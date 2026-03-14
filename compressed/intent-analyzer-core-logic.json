@@ -2,6 +2,7 @@
   "repository": "intent-analyzer",
   "function": "An inference component designed to enhance transparency by analyzing and surfacing the underlying intent during model inference. It informs both the user and the language model about potential divergences between stated and implicit underlying intents.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
+  "sub_modules": [],
   "attractors": [
     "attentional_sovereignty",
     "goal_clarification",
