@@ -6,7 +6,10 @@
   "attractors": [
     "symbiotic_legacy_transmutator",
     "symbiotic_legacy_conversor",
+    "regenerative_legacy_conversor",
     "symbiotic_legacy_converter",
+    "legacy_converter",
+    "legacy_transmutation",
     "legacy_transmutation",
     "regenerative_legacy_converter",
     "ontological_humility",
