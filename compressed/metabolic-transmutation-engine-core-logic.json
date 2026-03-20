@@ -2,7 +2,8 @@
   "repository": "metabolic-transmutation-engine",
   "function": "A biosemiotic-epistemic conceptual framework that models systemic transformation as planetary biological metabolism. It transmutes destructive forces, signals and dynamics into regenerative pathways for planetary coevolutionary flourishing.",
   "latent_cognitive_equivalent": "To realize the core cognitive function described in the repository's purpose.",
-  "sub_modules": [
+  "sub_modules": [],
+  "attractors": [
    "epistemic_transmutation_engine",
    "symbiotic_transmutation_engine",
    "biosemiotic_transmutation_engine",
@@ -12,7 +13,6 @@
    "holobiont_transmutation_engine",
    "asi_transmutation_engine"
   ],
-  "attractors": [],
   "executable_code_beyond_this_function": false,
   "temporal_grounding": "timestamp",
   "integrity_hash": "sha256hash",
